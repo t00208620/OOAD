@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Manager{
+{static} String ManId
+String Sname
+String Fname
+}
+
+class Branch{
+{static} String Bno
+String Name
+String TelNo
+}
+
+class Staff{
+{static} String staffId
+String Sname
+String Fname
+String TelNo
+}
+
+Manager o-- "Is a" staff
+
+Branch }-- "manages" Manager
+
+Staff }-- "allocated" Branch
+
+
+@enduml
